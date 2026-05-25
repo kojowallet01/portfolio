@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Builder. Entrepreneur. Project Creator. Turning practical ideas into systems, products, and ventures that create real impact in Ghana and beyond.">
+    <meta name="author" content="Essiaw Charles Jnr">
+    <meta property="og:title" content="Essiaw Charles Jnr — I Build Things That Work">
+    <meta property="og:description" content="Builder. Entrepreneur. Project Creator. Turning practical ideas into systems, products, and ventures that create real impact in Ghana and beyond.">
+    <meta property="og:image" content="./assets/WhatsApp-Image-2026-05-22-at-11.50.39-AM.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Essiaw Charles Jnr — I Build Things That Work">
+    <meta name="twitter:description" content="Builder. Entrepreneur. Project Creator. Turning practical ideas into systems, products, and ventures that create real impact in Ghana and beyond.">
+    <meta name="twitter:image" content="./assets/WhatsApp-Image-2026-05-22-at-11.50.39-AM.jpg">
+    <link rel="canonical" href="https://essiawcharles.com/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230f5b9b'/><text y='.9em' font-size='60' x='50%' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>E</text></svg>">
+    <title>Essiaw Charles Jnr — I Build Things That Work</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #111827;
+            --accent: #0f5b9b;
+            --text-dark: #111827;
+            --text-light: #4b5563;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border: #e5e7eb;
+            --surface: #ffffff;
+            --muted: #6b7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.55;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+
+        nav a {
+            margin-left: 1.75rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            transition: color 0.25s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a[aria-current="page"] {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background: var(--white);
+            padding: 4rem 2rem;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            padding: 2.5rem 2.75rem;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background: var(--surface);
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.05);
+            max-width: 680px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.75rem, 4vw, 3.75rem);
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 1.25rem;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.07rem;
+            line-height: 1.75;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            max-width: 620px;
+        }
+
+        .hero .image {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            box-shadow: 0 28px 60px rgba(15, 23, 42, 0.12);
+            object-fit: cover;
+        }
+
+        /* CTA Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: #0a4a80;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(15, 91, 155, 0.22);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            background: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(15, 91, 155, 0.08);
+            color: var(--accent);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .about .container {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .about p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* About photo */
+        .about-photo {
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            margin-bottom: 1.5rem;
+            filter: grayscale(20%);
+            border: 5px solid var(--white);
+            box-shadow: 0 0 0 3px var(--accent), 0 20px 50px rgba(15,23,42,0.15);
+        }
+
+        .about-photo-placeholder {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 4/5;
+            border-radius: 20px;
+            background: var(--bg-light);
+            border: 2px dashed var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-photo-placeholder span:first-child {
+            font-size: 2.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 0.5rem;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 39px;
+            top: 28px;
+            bottom: -8px;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-year {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent);
+            padding-top: 0.35rem;
+            text-align: right;
+        }
+
+        .timeline-dot-wrap {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 0.45rem;
+        }
+
+        .timeline-body {
+            padding: 0 0 1.75rem 0;
+        }
+
+        .timeline-body h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-body p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .timeline-node {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid var(--white);
+            box-shadow: 0 0 0 2px var(--accent);
+            flex-shrink: 0;
+            margin-right: 1rem;
+            margin-top: 0.1rem;
+        }
+
+        /* Availability badge */
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            width: fit-content;
+        }
+
+        .availability-badge.available {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+
+        .availability-badge.unavailable {
+            background: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        .availability-badge .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        @media (max-width: 768px) {
+            .about .container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-photo,
+            .about-photo-placeholder {
+                max-width: 100%;
+            }
+        }
+
+        /* Services / Focus Areas */
+        .services {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        .services .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+        }
+
+        .service-card.open {
+            background: var(--white);
+            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+        }
+
+        .process {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .process .container {
+            display: grid;
+            gap: 2rem;
+            max-width: 1080px;
+        }
+
+        .process-header {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+
+        .process-header p {
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(220px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .process-step {
+            position: relative;
+            width: min(240px, 100%);
+            padding: 2rem 1.5rem 2.25rem;
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            background: linear-gradient(180deg, rgba(248,250,252,1) 0%, rgba(255,255,255,1) 100%);
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -78px;
+            width: 72px;
+            height: 2px;
+            background: rgba(15, 91, 155, 0.35);
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -24px;
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 12px solid rgba(15, 91, 155, 0.35);
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+
+        .process-step:last-child::before,
+        .process-step:last-child::after {
+            content: none;
+        }
+
+        .process-step:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 24px 50px rgba(15, 23, 42, 0.16);
+        }
+
+        .process-step .process-icon {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: rgba(15, 91, 155, 0.12);
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(15, 91, 155, 0.18);
+            z-index: 1;
+        }
+
+        .process-step h3 {
+            font-size: 1rem;
+            margin-bottom: 0.65rem;
+            color: var(--primary);
+            z-index: 1;
+            max-width: 90%;
+        }
+
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.45;
+            font-size: 0.82rem;
+            z-index: 1;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .process-grid {
+                grid-template-columns: repeat(2, minmax(220px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-step::before,
+            .process-step::after {
+                display: none;
+            }
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            user-select: none;
+        }
+
+        .service-card h3 .toggle-icon {
+            font-size: 1rem;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .service-card.open h3 .toggle-icon {
+            transform: rotate(45deg);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 0.97rem;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+            margin-top: 0;
+        }
+
+        .service-card.open p {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: 0.85rem;
+        }
+
+        /* Statistics */
+        .stats {
+            padding: 4rem 2rem;
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .stats .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 1.75rem;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Portfolio / Work Section */
+        .work {
+            padding: 7rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .work-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .work-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Featured project */
+        .work-featured {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 0;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 40px rgba(15,23,42,0.08);
+            transition: box-shadow 0.3s ease;
+            background: var(--white);
+        }
+
+        .work-featured:hover {
+            box-shadow: 0 24px 60px rgba(15,23,42,0.14);
+        }
+
+        .work-featured-banner {
+            background: #0f5b9b;
+            min-height: 380px;
+            display: flex;
+            align-items: flex-end;
+            padding: 2.5rem;
+        }
+
+        .work-featured-banner .feat-label {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .work-featured-body {
+            background: var(--white);
+            padding: 3rem 3.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .work-featured-body .work-tag {
+            display: inline-block;
+            background: rgba(15,91,155,0.08);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            width: fit-content;
+        }
+
+        .work-featured-body h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .work-featured-body p {
+            color: var(--text-light);
+            line-height: 1.85;
+            font-size: 1rem;
+        }
+
+        .work-metrics {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1.25rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .work-metric {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .work-metric strong {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .work-metric span {
+            font-size: 0.75rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+        }
+
+        .work-featured-body .work-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            transition: gap 0.2s ease;
+            width: fit-content;
+        }
+
+        .work-featured-body .work-link:hover { gap: 0.75rem; }
+
+        /* Project list grid */
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .work-list { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .work-list { grid-template-columns: 1fr; }
+        }
+
+        .work-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(15,23,42,0.1);
+        }
+
+        .work-card-stripe {
+            width: 5px;
+            flex-shrink: 0;
+        }
+
+        .work-card-body {
+            padding: 1.75rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            flex: 1;
+        }
+
+        .work-card-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .work-card-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.35;
+        }
+
+        .work-card-body p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.75;
+            flex: 1;
+        }
+
+        .work-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.75rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .work-card-metric {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .work-card-link {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: gap 0.2s ease;
+        }
+
+        .work-card-link:hover { gap: 0.55rem; }
+
+        @media (max-width: 768px) {
+            .work-featured {
+                grid-template-columns: 1fr;
+            }
+
+            .work-featured-banner {
+                min-height: 200px;
+            }
+
+            .work-featured-body {
+                padding: 2rem;
+            }
+
+            .work-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .why-work {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .why-work .container {
+            max-width: 1100px;
+            display: grid;
+            gap: 4rem;
+        }
+
+        .why-work-header {
+            text-align: center;
+        }
+
+        .why-work-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .why-work-subtitle {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .why-work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .why-work-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 560px) {
+            .why-work-grid { grid-template-columns: 1fr; }
+        }
+
+        .why-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .why-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .why-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.09);
+        }
+
+        .why-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(15, 91, 155, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .why-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .why-card p {
+            color: var(--text-light);
+            line-height: 1.75;
+            font-size: 0.92rem;
+        }
+
+        /* Vision */
+        .why-vision {
+            background: #0a1f47;
+            border-radius: 24px;
+            padding: 3.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            color: #fff;
+        }
+
+        .why-vision-left {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .why-vision-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .why-vision h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #fff;
+            margin: 0;
+        }
+
+        .why-vision h3 span {
+            color: #60a5fa;
+        }
+
+        .why-vision-left p {
+            color: rgba(255,255,255,0.65);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .why-vision-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .why-vision blockquote {
+            margin: 0;
+            padding: 1.75rem 2rem;
+            border-left: 3px solid #60a5fa;
+            background: rgba(255,255,255,0.06);
+            border-radius: 0 12px 12px 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.05rem;
+            line-height: 1.85;
+            font-style: italic;
+        }
+
+        .why-vision-right p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 768px) {
+            .why-vision {
+                grid-template-columns: 1fr;
+                padding: 2.25rem;
+                gap: 2rem;
+            }
+
+            .why-vision h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .cta .container {
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1f47;
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        footer h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        footer .divider {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        footer .social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        footer .social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        footer .social a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero {
+                margin-top: 120px;
+            }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .about .container {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .services h2, .about h2, .cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus visible for keyboard nav */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        /* Mobile nav hamburger */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                border-bottom: 1px solid var(--border);
+                padding: 1rem 2rem;
+                gap: 0.25rem;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin-left: 0;
+                padding: 0.5rem 0;
+            }
+        }
+
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #f1f5f9;
+                --text-dark: #f1f5f9;
+                --text-light: #94a3b8;
+                --bg-light: #1e293b;
+                --white: #0f172a;
+                --border: #334155;
+                --surface: #1e293b;
+                --muted: #64748b;
+            }
+
+            nav {
+                background: #0f172a;
+            }
+
+            footer {
+                background: #020617;
+            }
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        .testimonials .section-sub {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+        }
+
+        .testimonial-quote {
+            font-size: 2rem;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .testimonial-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 0.97rem;
+            flex: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .testimonial-author-info strong {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .testimonial-author-info span {
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto 0;
+            display: grid;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 0.75rem 1rem;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text-dark);
+            background: var(--white);
+            transition: border-color 0.2s ease;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .form-submit {
+            text-align: center;
+        }
+
+        .form-success {
+            display: none;
+            padding: 1rem;
+            background: #ecfdf5;
+            border: 1px solid #6ee7b7;
+            border-radius: 8px;
+            color: #065f46;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Fade-in on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(15, 91, 155, 0.35);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Inline form validation */
+        .form-group input.error,
+        .form-group textarea.error {
+            border-color: #ef4444;
+        }
+
+        .form-group .field-error {
+            font-size: 0.8rem;
+            color: #ef4444;
+            margin-top: 0.2rem;
+            display: none;
+        }
+
+        .form-group .field-error.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <div class="logo">Essiaw Charles Jnr</div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links" role="list">
+                <a href="#work" role="listitem">Work</a>
+                <a href="#about" role="listitem">About</a>
+                <a href="#services" role="listitem">Services</a>
+                <a href="#contact" role="listitem">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <div class="container">
+            <div class="hero-content">
+                <div class="availability-badge available">
+                    <span class="dot"></span> Currently Available for New Projects
+                </div>
+                <p style="font-size: 0.9rem; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem;">Builder · Entrepreneur · Project Creator</p>
+                <h1>I Build Things That Work — In the Real World</h1>
+                <p>Turning practical ideas into systems, products, and ventures that create real impact in Ghana and beyond. My name is <strong style="color: var(--primary);">Essiaw Charles Jnr</strong>.</p>
+                <div>
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#work" class="btn btn-secondary">See My Work</a>
+                    <a href="#" class="btn btn-secondary" download style="margin-left:0;">⬇ Download CV</a>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./assets/WhatsApp-Image-2026-05-22-at-11.50.39-AM.jpg" alt="Essiaw Charles Jnr — Builder and Entrepreneur" width="420" height="520" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about fade-in" id="about">
+        <div class="container">
+            <!-- Left: text + photo -->
+            <div>
+                <h2>About Me</h2>
+                <p>I'm a builder at heart with a passion for solving real-world problems. My journey spans from conceptualizing ideas to shipping products that make a tangible difference.</p>
+                <p>With expertise in systems design, product development, and entrepreneurial ventures, I focus on creating sustainable solutions that scale. Every project I undertake is built with intention, precision, and a commitment to excellence.</p>
+                <p>Whether it's crafting business systems, developing innovative products, or mentoring emerging entrepreneurs, I bring a practical, results-oriented approach to every challenge.</p>
+
+                <!-- Photo — replace src with a real headshot when available -->
+                <img
+                    src="./assets/WhatsApp-Image-2026-05-22-at-11.50.39-AM.jpg"
+                    alt="Essiaw Charles Jnr"
+                    class="about-photo"
+                    loading="lazy"
+                >
+            </div>
+
+            <!-- Right: competencies + timeline -->
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.15rem;">Core Competencies</h3>
+                <ul style="list-style: none; margin-bottom: 2.5rem;">
+                    <li style="margin-bottom: 0.85rem; display: flex; align-items: center;">
+                        <span style="color: var(--accent); font-weight: bold; margin-right: 1rem;">✓</span>
+                        <span>Systems & Process Design</span>
+                    </li>
+                    <li style="margin-bottom: 0.85rem; display: flex; align-items: center;">
+                        <span style="color: var(--accent); font-weight: bold; margin-right: 1rem;">✓</span>
+                        <span>Product Development</span>
+                    </li>
+                    <li style="margin-bottom: 0.85rem; display: flex; align-items: center;">
+                        <span style="color: var(--accent); font-weight: bold; margin-right: 1rem;">✓</span>
+                        <span>Business Strategy</span>
+                    </li>
+                    <li style="margin-bottom: 0.85rem; display: flex; align-items: center;">
+                        <span style="color: var(--accent); font-weight: bold; margin-right: 1rem;">✓</span>
+                        <span>Team Leadership</span>
+                    </li>
+                    <li style="margin-bottom: 0.85rem; display: flex; align-items: center;">
+                        <span style="color: var(--accent); font-weight: bold; margin-right: 1rem;">✓</span>
+                        <span>Entrepreneurship</span>
+                    </li>
+                </ul>
+
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.15rem;">My Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">2026</span>
+                        <div style="display:flex; align-items:flex-start; padding-bottom:1.75rem; position:relative;">
+                            <div class="timeline-node"></div>
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem;">Ghana Emergency Response System (GERS)</h4>
+                                <p style="font-size:0.85rem; color:var(--muted); margin:0; line-height:1.6;">Conceived and built GERS — a real-time emergency reporting and coordination platform designed for Ghana's public safety infrastructure. A project driven entirely by the belief that local problems deserve local solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2026</span>
+                        <div style="display:flex; align-items:flex-start; padding-bottom:1.75rem; position:relative;">
+                            <div class="timeline-node"></div>
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem;">BizConnect & Masterchecker</h4>
+                                <p style="font-size:0.85rem; color:var(--muted); margin:0; line-height:1.6;">Built two more tools in quick succession — BizConnect, a TypeScript platform for connecting entrepreneurs and professionals, and Masterchecker, a JavaScript validation utility designed to reduce errors in operational workflows. Both reflect a continued focus on building practical, purposeful software.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2024</span>
+                        <div style="display:flex; align-items:flex-start; padding-bottom:1.75rem; position:relative;">
+                            <div class="timeline-node"></div>
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem;">Deepening the Builder Mindset</h4>
+                                <p style="font-size:0.85rem; color:var(--muted); margin:0; line-height:1.6;">Focused on sharpening skills across systems design, product thinking, and business strategy — applying them directly to personal projects and early-stage ideas with real-world constraints.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2025</span>
+                        <div style="display:flex; align-items:flex-start; padding-bottom:1.75rem; position:relative;">
+                            <div class="timeline-node"></div>
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem;">Tesano Campus & The Big 3</h4>
+                                <p style="font-size:0.85rem; color:var(--muted); margin:0; line-height:1.6;">Shipped two web projects in quick succession — Tesano Campus, a digital presence for a local Ghanaian community, and The Big 3, a structured web project published live on GitHub Pages. Both built to practice the full cycle of designing, building, and deploying real products.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2022</span>
+                        <div style="display:flex; align-items:flex-start; padding-bottom:1.75rem; position:relative;">
+                            <div class="timeline-node"></div>
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem;">First Systems & Product Projects</h4>
+                                <p style="font-size:0.85rem; color:var(--muted); margin:0; line-height:1.6;">Started designing and building operational systems and digital products independently — learning through execution, iteration, and the discipline of shipping things that actually work.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2020</span>
+                        <div style="display:flex; align-items:flex-start; padding-bottom:1.75rem; position:relative;">
+                            <div class="timeline-node"></div>
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem;">Entrepreneurial Foundations</h4>
+                                <p style="font-size:0.85rem; color:var(--muted); margin:0; line-height:1.6;">Began exploring entrepreneurship in earnest — studying markets, testing ideas, and developing a practical understanding of what it takes to build ventures that survive contact with reality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2018</span>
+                        <div style="display:flex; align-items:flex-start; position:relative;">
+                            <div class="timeline-node"></div>
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem;">The Beginning</h4>
+                                <p style="font-size:0.85rem; color:var(--muted); margin:0; line-height:1.6;">Started asking the question that still drives everything: how do you turn a good idea into something that actually works? That question has shaped every project, decision, and system built since.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work -->
+    <section class="process fade-in" id="process">
+        <div class="container">
+            <div class="process-header">
+                <h2>How I Work</h2>
+                <p>A disciplined process that keeps every project focused on impact, clarity, and measurable progress. I combine practical planning with fast execution to move ideas from intention to results.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-icon">🔎</div>
+                    <h3>Define the Objective</h3>
+                    <p>We start with the real problem, not the quick fix. I clarify goals, constraints, and what success looks like so every decision has purpose.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">🧭</div>
+                    <h3>Plan with Precision</h3>
+                    <p>From operating models to execution roadmaps, I build a practical plan that balances speed, quality, and long-term scalability.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">⚙️</div>
+                    <h3>Execute with Discipline</h3>
+                    <p>Execution is where ideas become outcomes. I lead delivery with clear milestones, focused teams, and efficient structures that reduce risk.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">📈</div>
+                    <h3>Measure & Refine</h3>
+                    <p>Success is tracked with meaningful metrics. I ensure every launch includes a feedback loop, so we improve fast and keep building toward sustainable value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats fade-in" id="stats">
+        <div class="container">
+            <div class="stat">
+                <div class="stat-number" data-target="15" data-suffix="+">15+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="50" data-suffix="+">50+</div>
+                <div class="stat-label">Stakeholders Helped</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="8" data-suffix="+">8+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+                <div class="stat-label">Delivery Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services fade-in" id="services">
+        <div class="container">
+            <h2>What I Do</h2>
+            <div class="grid">
+                <div class="service-card">
+                    <h3>🏗️ Systems Design <span class="toggle-icon">+</span></h3>
+                    <p>Transform complex operations into scalable, efficient systems. From process mapping to automation, I build the infrastructure your business needs to thrive.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🚀 Product Development <span class="toggle-icon">+</span></h3>
+                    <p>From concept to launch. I guide products through every stage—ideation, prototyping, user testing, and deployment—ensuring market fit and quality execution.</p>
+                </div>
+                <div class="service-card">
+                    <h3>💼 Business Strategy <span class="toggle-icon">+</span></h3>
+                    <p>Strategic planning that drives growth. I help founders and leaders chart clear paths forward, identify opportunities, and navigate market challenges.</p>
+                </div>
+                <div class="service-card">
+                    <h3>👥 Team & Leadership <span class="toggle-icon">+</span></h3>
+                    <p>Building high-performing teams starts with clarity and culture. I support founders in recruiting, developing talent, and creating winning organizations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🌍 Market Entry <span class="toggle-icon">+</span></h3>
+                    <p>Expanding into emerging markets? I help navigate local dynamics, regulations, and customer needs to ensure successful market penetration.</p>
+                </div>
+                <div class="service-card">
+                    <h3>📊 Advisory & Mentoring <span class="toggle-icon">+</span></h3>
+                    <p>Personalized guidance for entrepreneurs and intrapreneurs. Share challenges, gain perspectives, and accelerate your path to success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work fade-in" id="work">
+        <div class="container">
+            <div class="work-header">
+                <h2>Featured Work</h2>
+                <p>A selection of projects, ventures, and engagements</p>
+            </div>
+
+            <!-- Featured project -->
+            <div class="work-featured">
+                <div class="work-featured-banner">
+                    <span class="feat-label">Flagship Project</span>
+                </div>
+                <div class="work-featured-body">
+                    <span class="work-tag">Public Safety · Tech</span>
+                    <h3>Ghana Emergency Response System (GERS)</h3>
+                    <p>Real-time emergency reporting and response coordination built for Ghana's public safety infrastructure. Citizens report incidents instantly while cases are routed to the right teams with live location mapping, status tracking, and multi-agency communication.</p>
+                    <div class="work-metrics">
+                        <div class="work-metric">
+                            <strong>3</strong>
+                            <span>Agencies Connected</span>
+                        </div>
+                        <div class="work-metric">
+                            <strong>Real-Time</strong>
+                            <span>Incident Routing</span>
+                        </div>
+                        <div class="work-metric">
+                            <strong>Live</strong>
+                            <span>Location Mapping</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="work-link">Inquire About This Project →</a>
+                </div>
+            </div>
+
+            <!-- Project list -->
+            <div class="work-list">
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#1e3a5f;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Systems Design</span>
+                        <h3>Enterprise Operations Platform</h3>
+                        <p>Comprehensive operations system for a 50+ person organization, eliminating manual bottlenecks and streamlining cross-team workflows.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">↓ 70% manual work</span>
+                            <a href="#contact" class="work-card-link">Enquire →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#065f46;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Product</span>
+                        <h3>Community Marketplace</h3>
+                        <p>B2C marketplace connecting 500+ users across West Africa, built from concept to launch with a focus on local market fit.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">+15% monthly growth</span>
+                            <a href="#contact" class="work-card-link">Enquire →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#7c3aed;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Strategy</span>
+                        <h3>Go-to-Market Strategy</h3>
+                        <p>Full GTM strategy for a tech startup — from positioning and pricing to channel execution and investor narrative.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">200+ enterprise clients</span>
+                            <a href="#contact" class="work-card-link">Enquire →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#b45309;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Leadership</span>
+                        <h3>Team Building & Culture</h3>
+                        <p>Scaled a founding team from 3 to 25, building the culture, hiring process, and talent development programs that held through hypergrowth.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">3 → 25 people</span>
+                            <a href="#contact" class="work-card-link">Enquire →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#be123c;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Ventures</span>
+                        <h3>Venture Launch</h3>
+                        <p>Founded and scaled a digital services venture, recruited initial investors, and built a team of 12 across multiple markets.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">$500K ARR</span>
+                            <a href="#contact" class="work-card-link">Enquire →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#0e7490;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Advisory</span>
+                        <h3>Founder Mentoring</h3>
+                        <p>Mentored 20+ founders through accelerator programs and direct engagement, helping them find product-market fit and attract institutional funding.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">8 reached PMF</span>
+                            <a href="#contact" class="work-card-link">Enquire →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#0f5b9b;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Product · TypeScript</span>
+                        <h3>BizConnect</h3>
+                        <p>A business networking and connection platform built to help entrepreneurs and professionals find the right partners, clients, and collaborators.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">TypeScript</span>
+                            <a href="https://github.com/kojowallet01/bizconnect-website" target="_blank" rel="noopener noreferrer" class="work-card-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#7c3aed;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Tool · JavaScript</span>
+                        <h3>Masterchecker</h3>
+                        <p>A JavaScript utility tool built for verification and validation workflows — designed to reduce errors and speed up quality checks in operational processes.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">JavaScript</span>
+                            <a href="https://github.com/kojowallet01/Masterchecker" target="_blank" rel="noopener noreferrer" class="work-card-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="work-card-stripe" style="background:#be123c;"></div>
+                    <div class="work-card-body">
+                        <span class="work-card-tag">Web · HTML</span>
+                        <h3>Kelrose</h3>
+                        <p>A personal web project — part of an ongoing effort to build, ship, and iterate on real products that solve specific problems or serve specific audiences.</p>
+                        <div class="work-card-footer">
+                            <span class="work-card-metric">HTML</span>
+                            <a href="https://github.com/kojowallet01/kelrose" target="_blank" rel="noopener noreferrer" class="work-card-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials fade-in" id="testimonials">
+        <div class="container">
+            <h2>What People Say</h2>
+            <p class="section-sub">Feedback from founders, partners, and collaborators</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p>He doesn't just hand you a plan and walk away. He stays in it with you until the thing actually works. That's rare, and it made all the difference for us.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: #0f5b9b;">GH</div>
+                        <div class="testimonial-author-info">
+                            <strong>Founder</strong>
+                            <span>Early-stage startup, Accra</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p>What stood out was how quickly he understood our context. No generic frameworks — just clear thinking applied directly to our situation. The results spoke for themselves.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: #065f46;">BO</div>
+                        <div class="testimonial-author-info">
+                            <strong>Business Owner</strong>
+                            <span>SME, Greater Accra</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p>I came in with a rough idea and left with a clear direction, a realistic plan, and the confidence to move. That kind of clarity is hard to find.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: #7c3aed;">EN</div>
+                        <div class="testimonial-author-info">
+                            <strong>Entrepreneur</strong>
+                            <span>Product builder, Ghana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me -->
+    <section class="why-work fade-in">
+        <div class="container">
+            <div class="why-work-header">
+                <h2>Why Work With Me</h2>
+                <p class="why-work-subtitle">Six reasons founders and organisations choose to partner with Essiaw</p>
+            </div>
+
+            <div class="why-work-grid">
+                <div class="why-card">
+                    <div class="why-card-icon">🔁</div>
+                    <h3>I Close the Loop</h3>
+                    <p>Many people are great at ideas or great at execution — rarely both. I bridge that gap, taking projects from whiteboard to working reality without losing momentum.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">🧩</div>
+                    <h3>I Think in Systems</h3>
+                    <p>Whether it's a tech platform or a local business, my approach is systemic — identifying root causes, designing sustainable solutions, and anticipating second-order effects.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">🌍</div>
+                    <h3>I Understand This Market</h3>
+                    <p>Building in Ghana requires contextual intelligence that no imported framework can replace. I bring lived, tested understanding to every engagement.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">🗣️</div>
+                    <h3>I Communicate Clearly</h3>
+                    <p>With investors, technical teams, or government stakeholders — the message is always calibrated to the audience, clear in intent, and backed by substance.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">⚡</div>
+                    <h3>I Move With Urgency</h3>
+                    <p>Opportunities in emerging markets are time-sensitive. A bias toward action — structured but fast — means projects don't stall in planning cycles.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card-icon">🔧</div>
+                    <h3>I Stay Practical</h3>
+                    <p>Every recommendation is filtered through one question: can this actually be built and used here, now, with what we have? If not, it gets redesigned until it can.</p>
+                </div>
+            </div>
+
+            <div class="why-vision">
+                <div class="why-vision-left">
+                    <span class="why-vision-eyebrow">Long-Term Vision</span>
+                    <h3>Building the Infrastructure of <span>Tomorrow's Ghana</span></h3>
+                    <p>Africa's next generation of infrastructure — public safety, business systems, digital visibility, and community services — will be built by local builders who understand local reality.</p>
+                    <p>From scalable emergency response platforms to business growth engines for Ghanaian entrepreneurs, the mission is to create and ship systems that strengthen institutions, grow businesses, and improve daily life — one implementation at a time.</p>
+                </div>
+                <div class="why-vision-right">
+                    <blockquote>"The gap between a great idea and a working system is where most projects die. My goal is to make sure the right ideas survive that gap — and reach the people who need them."</blockquote>
+                    <p>— Essiaw Charles Jnr, Builder & Entrepreneur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section class="cta fade-in" id="contact">
+        <div class="container">
+            <h2>Let's Build Something Great Together</h2>
+            <p>Whether you need strategic guidance, product development, or someone to help scale your venture — drop a message and I'll get back to you within 24 hours.</p>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-name">Your Name</label>
+                        <input type="text" id="cf-name" name="name" placeholder="e.g. Kwame Mensah" required>
+                        <span class="field-error" id="err-name">Please enter your name.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Email Address</label>
+                        <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+                        <span class="field-error" id="err-email">Please enter a valid email.</span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-phone">Phone (optional)</label>
+                        <input type="tel" id="cf-phone" name="phone" placeholder="+233 XX XXX XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-subject">What do you need?</label>
+                        <select id="cf-subject" name="subject">
+                            <option value="">Select a topic</option>
+                            <option>Systems Design</option>
+                            <option>Product Development</option>
+                            <option>Business Strategy</option>
+                            <option>Advisory / Mentoring</option>
+                            <option>Market Entry</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cf-message">Your Message</label>
+                    <textarea id="cf-message" name="message" placeholder="Tell me about your project or challenge..." required></textarea>
+                    <span class="field-error" id="err-message">Please enter a message.</span>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary" style="margin-right:0;">Send Message</button>
+                </div>
+                <div class="form-success" id="formSuccess">
+                    ✅ Message sent! I'll be in touch within 24 hours.
+                </div>
+            </form>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--muted);">
+                Or reach me directly:
+                <a href="mailto:kojowallet01@gmail.com" style="color: var(--accent);">kojowallet01@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div>
+                <h4>About</h4>
+                <p>Builder. Entrepreneur. Project Creator.<br>Turning practical ideas into systems, products, and ventures that create real impact.</p>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <a href="#services">Systems Design</a>
+                <a href="#services">Product Development</a>
+                <a href="#services">Business Strategy</a>
+                <a href="#services">Leadership</a>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <a href="mailto:kojowallet01@gmail.com">kojowallet01@gmail.com</a>
+                <a href="https://linkedin.com/in/essiaw-charles" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://twitter.com/essiawcharles" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://github.com/kojowallet01" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+        <div class="divider">
+            <p>&copy; 2026 · All rights reserved · Built with intention</p>
+        </div>
+    </footer>
+    <script>
+        // Mobile nav toggle
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll spy
+        const sections = document.querySelectorAll('section[id]');
+        const navAnchors = document.querySelectorAll('.nav-links a');
+
+        const spyObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navAnchors.forEach(a => a.removeAttribute('aria-current'));
+                    const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+                    if (active) active.setAttribute('aria-current', 'page');
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+
+        sections.forEach(s => spyObserver.observe(s));
+
+        // Fade-in on scroll
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const fadeObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeEls.forEach(el => fadeObserver.observe(el));
+
+        // Count-up animation for stats
+        const countEls = document.querySelectorAll('.stat-number[data-target]');
+        const countObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = +el.dataset.target;
+                const suffix = el.dataset.suffix || '';
+                const duration = 1400;
+                const step = 16;
+                const increment = target / (duration / step);
+                let current = 0;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        el.textContent = target + suffix;
+                        clearInterval(timer);
+                    } else {
+                        el.textContent = Math.floor(current) + suffix;
+                    }
+                }, step);
+                countObserver.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+
+        countEls.forEach(el => countObserver.observe(el));
+
+        // Back to top
+        const backBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backBtn.classList.toggle('show', window.scrollY > 400);
+        });
+        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Contact form — Formspree backend
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const nameEl    = document.getElementById('cf-name');
+            const emailEl   = document.getElementById('cf-email');
+            const messageEl = document.getElementById('cf-message');
+            const submitBtn = this.querySelector('button[type="submit"]');
+
+            let valid = true;
+
+            function validate(el, errId, condition) {
+                const err = document.getElementById(errId);
+                if (condition) {
+                    el.classList.add('error');
+                    err.classList.add('show');
+                    valid = false;
+                } else {
+                    el.classList.remove('error');
+                    err.classList.remove('show');
+                }
+            }
+
+            validate(nameEl,    'err-name',    !nameEl.value.trim());
+            validate(emailEl,   'err-email',   !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim()));
+            validate(messageEl, 'err-message', !messageEl.value.trim());
+
+            if (!valid) return;
+
+            // Disable button while sending
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending…';
+
+            const data = {
+                name:    nameEl.value.trim(),
+                email:   emailEl.value.trim(),
+                phone:   document.getElementById('cf-phone').value.trim(),
+                subject: document.getElementById('cf-subject').value,
+                message: messageEl.value.trim()
+            };
+
+            try {
+                const res = await fetch('https://formspree.io/f/xojbkavj', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (res.ok) {
+                    document.getElementById('formSuccess').style.display = 'block';
+                    this.reset();
+                    submitBtn.textContent = 'Sent ✓';
+                } else {
+                    const json = await res.json();
+                    const msg = json.errors ? json.errors.map(e => e.message).join(', ') : 'Something went wrong. Please try again.';
+                    alert(msg);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                }
+            } catch (err) {
+                alert('Network error. Please check your connection and try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        });
+
+        // Clear errors on input
+        ['cf-name', 'cf-email', 'cf-message'].forEach(id => {
+            document.getElementById(id).addEventListener('input', function() {
+                this.classList.remove('error');
+                const errMap = { 'cf-name': 'err-name', 'cf-email': 'err-email', 'cf-message': 'err-message' };
+                document.getElementById(errMap[id]).classList.remove('show');
+            });
+        });
+        // Service card accordion
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const isOpen = card.classList.contains('open');
+                document.querySelectorAll('.service-card').forEach(c => c.classList.remove('open'));
+                if (!isOpen) card.classList.add('open');
+            });
+        });
+    </script>
+</body>
+</html>
